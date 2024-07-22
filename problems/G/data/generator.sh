@@ -1,3 +1,5 @@
+set -e
+
 g++ generator.cpp -o generator.tmp -std=c++14 -O2
 
 for i in {1..11}
