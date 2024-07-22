@@ -1,7 +1,12 @@
 set -e
 
-echo "==================== Problem A ===================="
-cd problems/A
+# echo "==================== Problem A ===================="
+# cd problems/A
+# bash check.sh
+# cd ../..
+
+echo "==================== Problem B ===================="
+cd problems/B
 bash check.sh
 cd ../..
 
