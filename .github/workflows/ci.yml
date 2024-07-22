@@ -11,6 +11,6 @@ jobs:
     steps:
     - name: Check out
       uses: actions/checkout@v3
-    - name: Install And Build
+    - name: Check Problems
       run: |
         bash check.sh
