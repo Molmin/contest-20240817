@@ -98,8 +98,12 @@ int main(){
         }
         if(test>=19){
             n=2e5;
-            for(int i=1;i<=n;i++)
-                a[i]=rnd(1,1e9);
+            set<int> S;
+            for(int i=1;i<=n;i++){
+                do a[i]=rnd(1,1e9);
+                while(S.find(a[i])!=S.end());
+                S.insert(a[i]);
+            }
         }
     }
     else if(flag){

@@ -11,6 +11,7 @@ do
         echo $i $j
         echo $i $j >id.tmp
         ./generator.tmp <id.tmp >result/$i-$j.in
+        ./validator.tmp <result/$i-$j.in
         time timeout 0.3 ./std.tmp <result/$i-$j.in >result/$i-$j.ans
     done
 done

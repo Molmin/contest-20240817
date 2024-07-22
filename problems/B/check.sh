@@ -1,6 +1,9 @@
 set -e
 
 cd data
+cp ../../../testlib.h testlib.h
+echo "Compiling Validator"
+g++ validator.cpp -o validator.tmp -std=c++14 -O2
 bash generator.sh
 cd ..
 
