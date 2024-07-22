@@ -1,4 +1,4 @@
 *.tmp
 *.tmp.*
-*.zips
+*.zip
 problems/**/testlib.h

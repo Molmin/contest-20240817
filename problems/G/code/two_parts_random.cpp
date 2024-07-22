@@ -39,7 +39,7 @@ int main(){
     }
     while(true){
         pair<unsigned long long,long long> tmp=get(a+n);
-        if(mp[m-tmp.second])print(tmp.first,mp[m-tmp.second]);
+        if(mp[m-tmp.second])print(mp[m-tmp.second],tmp.first);
     }
     return 0;
 }

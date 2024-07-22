@@ -5,21 +5,7 @@
 using namespace std;
 const int cntbase=1,base[cntbase]={10000000};
 
-mt1993// two_parts_random.cpp
-// s = 1e12
-
-#include<bits/stdc++.h>
-using namespace std;
-
-mt19937_64 rnd(random_device{}());
-
-int n;
-long long m,a[1001];
-…        pair<unsigned long long,long long> tmp=get(a+n);
-        if(mp[m-tmp.second])print(tmp.first,mp[m-tmp.second]);
-    }
-    return 0;
-}7 mt_rand(random_device{}());
+mt19937 mt_rand(random_device{}());
 int rnd(int l,int r){
     return mt_rand()%(r-l+1)+l;
 }

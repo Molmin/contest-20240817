@@ -42,7 +42,7 @@ int main(){
         }
         tmp=get(a+n);
         if(tmp.second<m){
-            if(mp1[m-tmp.second])print(tmp.first,mp1[m-tmp.second]);
+            if(mp1[m-tmp.second])print(mp1[m-tmp.second],tmp.first);
             else mp2[tmp.second]=tmp.first;
         }
     }
