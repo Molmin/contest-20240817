@@ -1,6 +1,6 @@
 type: default
 time: 1200ms
-memory: 512MB
+memory: 768MB
 checker_type: default
 user_extra_files:
   - communicator.cpp
