@@ -14,8 +14,9 @@ int main(){
     scanf("%d%d",&subtask,&test);
     if(subtask==1)n=4;
     else if(subtask==3)n=8;
-    else if(subtask==5)n=28;
-    else n=40;
+    else if(subtask==4)n=28;
+    else if(subtask==5||subtask==6)n=40;
+    else n=70;
     int pw,pm,py,pother;
     int type=test%8;
     if(type==0||type==1){
@@ -59,14 +60,14 @@ int main(){
     if(type==4)pdel=90;
     if(type==5)pdel=100;
     if(subtask==2)pdel=0;
-    if(subtask==6)pdel=100;
+    if(subtask==7)pdel=100;
     for(int i=1;i<=n;i++)
         if(rnd(0,99)<pdel)s[i]='?';
     if(n>8&&pdel)for(int i=1;i<=3;i++)
         s[rnd(1,n)]=rnd(0,3)?rnd('a','z'):'?';
     if(n>8)m+=rnd(-3,3);
     else if(rnd(1,10)>3)m+=rnd(-1,1);
-    m=min(m,subtask==4?80:3000),m=max(m,0);
+    m=min(m,subtask==5?80:15000),m=max(m,0);
     printf("%d %d\n%s\n",n,m,s+1);
     return 0;
 }

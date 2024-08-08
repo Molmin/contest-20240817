@@ -7,4 +7,4 @@ echo "Compiling Checker"
 g++ checker.cpp -o checker.tmp -std=c++14 -O2
 cd ..
 
-bash judge.sh code/std.cpp 1 7
+bash judge.sh code/std.cpp 1 8

@@ -2,8 +2,8 @@
 using namespace std;
 
 int n,k;
-char s[42];
-bitset<2501> dp[41][41][41];
+char s[71];
+bitset<15001> dp[71][71][71];
 
 void solve(int i,int cntW,int cntY,int k){
     if(i==0)return;
