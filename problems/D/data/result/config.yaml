@@ -78,3 +78,7 @@ subtasks:
         output: 5-3.ans
       - input: 5-4.in
         output: 5-4.ans
+langs:
+- cc.cc14o2
+- cc.cc17o2
+- cc

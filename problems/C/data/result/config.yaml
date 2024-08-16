@@ -54,3 +54,7 @@ subtasks:
         output: 4-2.in
       - input: 4-3.in
         output: 4-3.in
+langs:
+- cc.cc14o2
+- cc.cc17o2
+- cc
