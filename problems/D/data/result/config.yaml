@@ -1,0 +1,80 @@
+type: default
+time: 2300ms
+memory: 768MB
+user_extra_files:
+  - communicator.cpp
+  - compile.sh
+  - execute.sh
+subtasks:
+  - score: 8
+    if: []
+    id: 1
+    type: min
+    cases:
+      - input: 1-1.in
+        output: 1-1.ans
+      - input: 1-2.in
+        output: 1-2.ans
+      - input: 1-3.in
+        output: 1-3.ans
+      - input: 1-4.in
+        output: 1-4.ans
+  - score: 17
+    if:
+      - 1
+    id: 2
+    type: min
+    cases:
+      - input: 2-1.in
+        output: 2-1.ans
+      - input: 2-2.in
+        output: 2-2.ans
+      - input: 2-3.in
+        output: 2-3.ans
+      - input: 2-4.in
+        output: 2-4.ans
+  - score: 25
+    if:
+      - 1
+      - 2
+    id: 3
+    type: min
+    cases:
+      - input: 3-1.in
+        output: 3-1.ans
+      - input: 3-2.in
+        output: 3-2.ans
+      - input: 3-3.in
+        output: 3-3.ans
+      - input: 3-4.in
+        output: 3-4.ans
+  - score: 28
+    if: []
+    id: 4
+    type: min
+    cases:
+      - input: 4-1.in
+        output: 4-1.ans
+      - input: 4-2.in
+        output: 4-2.ans
+      - input: 4-3.in
+        output: 4-3.ans
+      - input: 4-4.in
+        output: 4-4.ans
+  - score: 22
+    if:
+      - 1
+      - 2
+      - 3
+      - 4
+    id: 5
+    type: min
+    cases:
+      - input: 5-1.in
+        output: 5-1.ans
+      - input: 5-2.in
+        output: 5-2.ans
+      - input: 5-3.in
+        output: 5-3.ans
+      - input: 5-4.in
+        output: 5-4.ans
