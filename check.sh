@@ -25,6 +25,11 @@ cd problems/E
 bash check.sh
 cd ../..
 
+echo "==================== Problem F ===================="
+cd problems/F
+bash check.sh
+cd ../..
+
 echo "==================== Problem G ===================="
 cd problems/G
 bash check.sh
