@@ -34,3 +34,8 @@ echo "==================== Problem G ===================="
 cd problems/G
 bash check.sh
 cd ../..
+
+echo "==================== Problem H ===================="
+cd problems/H
+bash check.sh
+cd ../..
