@@ -1,7 +1,7 @@
 type: default
 memory: 512MB
 checker_type: testlib
-checker: checker.cc
+checker: checker.cpp
 subtasks:
   - score: 1
     if: []
