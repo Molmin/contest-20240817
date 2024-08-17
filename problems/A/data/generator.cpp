@@ -14,7 +14,7 @@ int main(){
     auto contestId=[&](int val){
         string str="";
         while(val)str+=char('0'+val%10),val/=10;
-        str.reserve();
+        reverse(str.begin(),str.end());
         input+=str;
     };
     if(test<=3)contestId(rnd(1,9));
