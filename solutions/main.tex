@@ -17,7 +17,7 @@
 
 \usefonttheme{professionalfonts}
 
-\title[照亮人类智慧的八道光芒]{照亮人类智慧的八道光芒}
+\title[A Very Easy Weekly Round]{A Very Easy Weekly Round}
 
 \author{Milmon}
 \institute[Hailiang Junior High School]
@@ -106,7 +106,18 @@ $m$ 次询问每个子集所对应的子集。$1 \leq m \leq 5 \times 10^4$，$1
 \pause
 子任务 $4$：无特殊限制。\\
 \pause
-钦定一个原集合的元素 $x$，如果给定的子集没有 $x$ 就加上 $x$，否则删掉 $x$。这也证明了大小为奇数的子集和大小为偶数的子集数量相等。
+钦定一个原集合的元素 $x$，如果给定的子集没有 $x$ 就加上 $x$，否则删掉 $x$。这也证明了大小为奇数的子集和大小为偶数的子集数量相等。\\
+\pause
+本题在赛时存在若干类似的做法，下面介绍一个赛时某选手在最后 $1$ 分钟通过此题所使用的做法。
+\end{frame}
+
+\begin{frame}
+\frametitle{5M 星球：题解}
+不妨令第 $k$ 小的 $1$ 的数量为奇数的数对应第 $k$ 小的 $1$ 的数量为偶数的数。\\
+\pause
+考虑数位 dp。先求出 $f(i, j)$ 表示前 $i$ 个字符中 $1$ 的数量模 $2$ 同余于 $j$ 的方案数。\\
+\pause
+然后处理一个数只需要做一遍 dp，依次确定每个位置的答案即可。
 \end{frame}
 
 \section{D}
@@ -132,9 +143,15 @@ $m$ 次询问每个子集所对应的子集。$1 \leq m \leq 5 \times 10^4$，$1
 \frametitle{小老虎训练中心：子任务 $5$}
 子任务 $5$：无特殊限制。\\
 \pause
-子任务 $4$ 的做法在相邻字符相同时可能出现问题，一个特殊字符 \texttt{.} 表示和上一个字符相同，这样可以保证相邻字符不相同，字符集大小变大 $1$，仍然可以通过。\\
+子任务 $4$ 的做法在相邻字符相同时可能出现问题，一个特殊字符 \texttt{.} 表示和上一个字符相同，这样可以保证相邻字符不相同，字符集大小变大 $1$，仍然可以通过。
+\end{frame}
+
+\begin{frame}
+\frametitle{小老虎训练中心：子任务 $5$ 其他做法}
+子任务 $5$：无特殊限制。\\
+DeaphetS\footnote{在洛谷关注 \href{https://www.luogu.com.cn/user/4672}{DeaphetS} 可以获得回关！} 的做法：若第 $i$ 个字符是 $s_i$（此处 $0 \leq s_i < 26$），则设 $S$ 是所有 $26 \times i + s_i$ 组成的集合。从给定序列中找出所有模 $40 \times 26$ 的余数在 $S$ 中的数即可，期望能找到 $\dfrac{3 \times 10^4}{26 \times 40}$ 约等于 $29$ 个，可以通过。\\
 \pause
-DeaphetS\footnote{在洛谷关注 \href{https://www.luogu.com.cn/user/4672}{DeaphetS} 可以获得回关！} 的做法：若第 $i$ 个字符是 $s_i$（此处 $0 \leq s_i < 26$），则设 $S$ 是所有 $26 \times i + s_i$ 组成的集合。从给定序列中找出所有模 $40 \times 26$ 的余数在 $S$ 中的数即可，期望能找到 $\dfrac{3 \times 10^4}{26 \times 40}$ 约等于 $29$ 个，可以通过。
+大众做法是每个字符后面都插入一个特殊字符来识别，因为限制比较松，所以可以通过。
 \end{frame}
 
 \section{E}
@@ -312,6 +329,14 @@ $1 \leq n \leq 50$，存在 $1 \leq k \leq 12$ 使得 $m = 10^k$。
 \end{block}
 \end{frame}
 
+\begin{frame}
+\frametitle{垃圾桶：算法 $12$}
+\begin{block}{算法 $12$}
+这是一个来自于赛时某选手的做法。\\
+前若干个数随机选取，剩下的数 Meet in the Middle，卡一卡可以通过此题。
+\end{block}
+\end{frame}
+
 \section{H}
 
 \begin{frame}
@@ -365,6 +390,36 @@ $1 \leq n \leq 50$，存在 $1 \leq k \leq 12$ 使得 $m = 10^k$。
 \end{frame}
 
 \section{I}
+
+\begin{frame}
+\frametitle{一些有趣的事情}
+\begin{itemize}
+\item B 题的验题（口胡）阶段，验题人 jiazhichen844 和审核人 DeaphetS 均被硬控 10 分钟左右。这导致出现了你现在看到的 A 题。\\
+\pause
+\item  B 题的造题阶段，为了让 jiazhichen844 干活，某人提出了 Code Golf，比出题人和验题人的代码谁短。\\
+\pause
+\item  如果你想了解更多的 C 和 E 题的题目背景，欢迎阅读 fangzichang 的文章 \footnote{\url{https://www.luogu.com/article/d3dysfnf}}。\\
+\pause
+\item  E 题原题中由于搬题人取得了赛时 + 赛后的最优解，所以一开始没考虑其他做法，后来 konata 提出了某做法，经过对于原题的研究，我们发现本题存在很多更高复杂度的做法通过，所以加大了数据范围并且缩小了时间限制。
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{一些有趣的事情}
+\begin{itemize}
+\item  批话哥 Umbrella Leaf 假装自己一开始不会 E 题。\\
+\pause
+\item  非常抱歉，A 题测试数据并不是故意有前导零，而是数据生成器中翻转字符串使用了 \texttt{str.reverse()}，导致字符串并没有被翻转。\\
+\pause
+\item  验题人 jiazhichen844 拿着题解差点过不去 G 题。\\
+\pause
+\item  本场比赛预期结果是有 $2 \sim 3$ 个选手能够通过 $6 \sim 8$ 题。\\
+\pause
+\item  H 题审核人 DeaphetS 验题时花费了整整 3 个小时左右的时间才取得 AC。\\
+\pause
+\item  本来本场比赛还有 I 题《基础贪心练习题 / 堆石头》，但是由于 I 题比较适合放在模拟赛，正好题目比较多，所以删减了。
+\end{itemize}
+\end{frame}
 
 \begin{frame}
 \frametitle{吐槽}
